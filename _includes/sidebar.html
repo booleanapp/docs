@@ -1,7 +1,7 @@
 {% include custom/sidebarconfigs.html %}
+<a href="/"><img src="https://d2nu4yd2hhx0jx.cloudfront.net/boolean.png" alt="Boolean" style="width:122px;height:30px;"/></a>&nbsp;docs<br><br>
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
     {% for entry in sidebar %}
     {% for folder in entry.folders %}
     {% if folder.output contains "web" %}
