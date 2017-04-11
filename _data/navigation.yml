@@ -1,0 +1,12 @@
+- name: Pricing
+  link: /pricing/
+  new_window: false
+  highlight: false
+- name: Docs
+  link: /docs/
+  new_window: false
+  highlight: false
+- name: Request access
+  link: https://goo.gl/forms/bE1Nk8cCStqqAdHn2
+  new_window: true
+  highlight: true

@@ -1,2 +1,0 @@
-# docs
-Boolean docs
