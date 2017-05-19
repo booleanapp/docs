@@ -8,7 +8,7 @@ permalink: index.html
 
 ## What is Boolean?
 
-Boolean helps you send one question email surveys to your users. Recipients can answer the question with a single click from within their inbox.
+Boolean helps you send one question email surveys to your users. Recipients can answer the question with a single click from within their inbox
 
 
 ## How do I get help?
