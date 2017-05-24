@@ -16,7 +16,7 @@ Traditional surveys don’t get many responses because their long. Even the mini
 
 ## How do I get insights from responses?
 
-You might want to know why survey recipients are giving positive or negative response. Boolean’s segmentation feature will give you the likely answer. You can use this feature by sending key-value pair meta data with every survey request. You can later segment responses using this meta data. This way you could pin point the finer aspects of your product or service which is contributing to positive or negative response. Read more about segmentation here (hyperlink).
+You might want to know why survey recipients are giving positive or negative response. Boolean’s segmentation feature will give you the likely answer. You can use this feature by sending key-value pair meta data with every survey request. You can later segment responses using this meta data. This way you could pin point the finer aspects of your product or service which is contributing to positive or negative response. Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
 
 
 ## Features:
@@ -47,7 +47,7 @@ You can see response data in real time in our dashboard. “Boolean score” is 
 
 ### Segmentation
 
-Read more about segmentation here (hyperlink).
+Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
 
 ### High quality inbox delivery
 
@@ -59,7 +59,7 @@ You can prevent a single survey recipient from getting too many surveys by cappi
 
 ### RESTful API
 
-You can use our RESTful API to fully automate your survey workflow. Read API reference here (hyperlink).
+You can use our RESTful API to fully automate your survey workflow. Read API reference [here](/docs/v1_introduction.html).
 
 ### Comments
 
@@ -67,9 +67,9 @@ After a survey recipient gives a response we give him/her an option to give comm
 
 ### Easy unsubscribing
 
-We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future surveys in the project (hyperlink). You can also unsubscribe recipients using our API (hyperlink). Please note that unsubscribe is at project (hyperlink) level.
+We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future surveys in the project. You can also unsubscribe recipients using our [API](/docs/v1_unsubscribes.html). Please note that unsubscribe is at project level.
 
 ### Scheduling
 
-By default, all surveys are sent out immediately on request. You can change this behavior by specifying a time in future. Please refer API documentation (hyperlink) for more information.
+By default, all surveys are sent out immediately on request. You can change this behavior by specifying a time in future. Please refer [API docs](/docs/v1_surveys.html) for more information.
 

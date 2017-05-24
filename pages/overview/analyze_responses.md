@@ -7,20 +7,19 @@ folder: mydoc
 
 ## Score
 
-Boolean provides two metrics for analyzing responses at the project level - “Positive score” and “Boolean score”. Both these metrics attempt to capture overall satisfaction of your users. 
-
-### Positive score
+Boolean provides two metrics for analyzing responses at the project level - “Positive score” and “Boolean score”.
+### Percentage positive
 
 It is the percentage of positive responses in a time period. You can see this score for all projects in the dashboard page. Once inside a project you can see it in the “score” page. The score page will also have a graph to show the trend of positive score in current week. You can also get this score through API.
 
 ### Boolean score
 
-It is rating from -1 to +1 derived from count of positive responses, negative responses and no responses (and email not opened) and no responses (and email opened). We have created this metric because “Positive score” can be misleading at times. For example, if you sent 1000 surveys and got only 10 responses which were all positive you will see a positive score of 100%. This is misleading as majority of your users didn’t give a response. A user opting to not give a response can be treated as a signal of his/her dissatisfaction. “Boolean score” incorporates this signal in its calculation of rating. Since Boolean knows when a survey is delivered or opened by user it can use a “no response” as a signal with confidence.
-You can see this score for all projects in the dashboard page. Once inside a project you can see it in the “score” page. You can also get this score through API.
+It is rating from -10 to +10 derived from an algorithm which takes into account additional signals like email opens. We have created this metric because “Positive score” can be misleading at times. For example, if you sent 1000 surveys and got only 10 responses which were all positive you will see a positive score of 100%. This is misleading as majority of your users didn’t give a response. A user opting to not give a response can be treated as a signal of his/her dissatisfaction. “Boolean score” incorporates this signal in its calculation of rating. Since Boolean knows when a survey is delivered or opened by user it can use a “no response” as a signal with confidence.
+You can see this score for all projects in the dashboard page. Once inside a project you can see it in the "responses" page. You can also get this score through API.
 
 ## Segmenting responses
 
-You can segment responses to see variations in scores across different combinations of properties. You will be able to find segments which have lower scores compared to overall average. Some aspects of your product/service in these segments are probably causing bad experience to your users. You can improve these aspects and come back to check for improvement in scores. This the true power of Boolean’s one question surveys. High volume user feedback combined with segmentation will give you valuable ideas to improve your product/service.
+You can segment responses to see variations in scores across different combinations of properties. Segments are created through combinations of property conditions. You will be able to find segments which have lower scores compared to overall average. Some aspects of your product/service in these segments are probably causing bad experience to your users. You can improve these aspects and come back to check for improvement in scores. This the true power of Boolean’s one question surveys. High volume user feedback combined with segmentation will give you valuable ideas to improve your product/service.
 
 ### Key concepts in segmentation
 
@@ -70,7 +69,7 @@ Scores will update immediately after you add a rule. You can repeat above steps 
 
 ### Segmenting responses through API
 
-Read API documentation.
+Read [API documentation](/docs/v1_score.html).
 
 ## Comments
 

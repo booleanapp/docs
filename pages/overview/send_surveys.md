@@ -79,20 +79,23 @@ You can quickly send non-transactional surveys from within the dashboard. All yo
 
 ### Sending transactional and non-transactional surveys through API
 
-Read [API documentation](/docs/v1_introduction.html).
+Read [API documentation](/docs/v1_surveys.html).
 
 ## Properties
 
-You can add data about user’s unique interaction with your product/service as “properties” of a survey. Boolean supports six different types of properties - Number, String, Number set, String set, Date and Boolean. The table below explains each type of property.
+You can add key-value pair meta data about as “properties” of a survey. Boolean supports six different types of properties - Number, String, Number set, String set, Date and Boolean. The table below explains each type of property.
 
 |Property type|Examples|
 |-------------|--------|
 |Number|Order amount, visit count, page views.|
-|String|Customer name, Item name, City|
+|Number set|Item prices, room prices.|
+|String|Customer name, item name, City|
+|String set|Screen names, product names|
 |Boolean|Returning customer (Yes or No)|
 |Date|Order date, delivery date|
 
-Properties can be set while sending surveys through API. You can send a maximum of 50 unique properties per project. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
+
+Properties are set while sending surveys through API. You can send a maximum of 50 unique properties per project. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
 
 ## Unsubscribes
 

@@ -7,7 +7,7 @@ folder:
 
 ## GET /scores
 
-Used to get customer satisfaction scores.
+Used to get survey response aggregates.
 
 ### URL parameters
 
