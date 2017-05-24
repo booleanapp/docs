@@ -79,7 +79,7 @@ You can quickly send non-transactional surveys from within the dashboard. All yo
 
 ### Sending transactional and non-transactional surveys through API
 
-Read API documentation.
+Read [API documentation](/v1_introduction.html).
 
 ## Properties
 
