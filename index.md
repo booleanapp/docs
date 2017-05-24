@@ -8,10 +8,68 @@ permalink: index.html
 
 ## What is Boolean?
 
-Boolean helps you send one question email surveys to your users. Recipients can answer the question with a single click from within their inbox
+Boolean is a service for sending single question surveys. The surveys are sent by email. The survey question has two predetermined answers - one positive and one negative. Recipients can respond by clicking on one of the answers from within their inbox.
+
+## How is it useful?
+
+Traditional surveys don’t get many responses because their long. Even the minimal responses they get don’t have legitimacy due to low response percentage. Boolean solves this problem. In Boolean you can ask only one question in a survey. Users will love you for not troubling them with a long and boring survey. They will respond in huge numbers. The one question you ask can be anything related to your product or service. We encourage you to ask a general feedback question. E.g. “How was your experience ordering with us?” Answer - “Good” or “Bad”.
+
+## How do I get insights from responses?
+
+You might want to know why survey recipients are giving positive or negative response. Boolean’s segmentation feature will give you the likely answer. You can use this feature by sending key-value pair meta data with every survey request. You can later segment responses using this meta data. This way you could pin point the finer aspects of your product or service which is contributing to positive or negative response. Read more about segmentation here (hyperlink).
 
 
-## How do I get help?
+## Features:
+	
+### Fully customizable
 
-Please email us at support@booleanapp.com. You can expect a fast reply during (9AM EST to 5PM EST) and (4:30 AM GMT to 11:30AM GMT) on weekdays. We will respond to emails received during weekend on Monday in the order they were received.
+You can customize the following aspects of survey:
+
+#### Brand logo
+
+This is the image which appears above the question.
+
+#### Brand name
+
+This is used in “sender name” of email and “alt text” of brand logo.
+
+#### Email subject
+
+The default subject is “Quick feedback on _brand name_”. You can change it to “Feedback on _keyword_ with _keyword_”. E.g. “Feedback on order with abcstores.com
+
+#### Reply-to email
+
+By default, survey recipients will not be able to reply to survey email. You can allow replies by providing a reply-to email address. All replies will be sent to this email directly from recipients’ inbox.
+
+### Real time dashboard
+
+You can see response data in real time in our dashboard. “Boolean score” is based on an algorithm which uses additional signals like email opens to give a score between -10 and 10. The higher the number the more positive feedback you got from your users.
+
+### Segmentation
+
+Read more about segmentation here (hyperlink).
+
+### High quality inbox delivery
+
+We work with high quality email delivery partners to make sure your surveys are delivered fast and reach the “primary” inbox.
+
+### Throttling
+
+You can prevent a single survey recipient from getting too many surveys by capping the surveys he/she can receive in a day, week or month. By default, a single recipient will receive a maximum of 1 per day, 2 per week and 4 per month.
+
+### RESTful API
+
+You can use our RESTful API to fully automate your survey workflow. Read API reference here (hyperlink).
+
+### Comments
+
+After a survey recipient gives a response we give him/her an option to give comments. You can see all these comments in the dashboard.
+
+### Easy unsubscribing
+
+We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future surveys in the project (hyperlink). You can also unsubscribe recipients using our API (hyperlink). Please note that unsubscribe is at project (hyperlink) level.
+
+### Scheduling
+
+By default, all surveys are sent out immediately on request. You can change this behavior by specifying a time in future. Please refer API documentation (hyperlink) for more information.
 

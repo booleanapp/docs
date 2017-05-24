@@ -14,11 +14,11 @@ It is easy to send surveys in Boolean. It is done in 2 steps:
 
 You will need to provide the following minimum settings to create a project. 
 
-#### Company name
+#### Brand name
 	
-Provide the name of your Company. It will be used in the survey email subject. The standard subject of all surveys is “Quick feedback on <product/service name>”. 
+Provide a name for your product/service. It is used in sender name, subject and “alt text” of brand logo in email. Default email subject is “Quick feedback on _brand name_”. 
 
-#### Company logo
+#### Brand logo
 
 Upload a easily identifiable logo of your product/service. It will be used in the header of survey email. 
 
@@ -36,16 +36,14 @@ Provide the negative answer for your question (max 10 characters). This answer w
 
 ### Advanced project settings
 
-These settings are not compulsory. They have good defaults. You can customize them if you want.
-
+These settings are not compulsory. They have good defaults.
 #### Project name
 
-A name for your project. It will default to “<project> <date>”. It can be changed later.
+A name for your project. It will default to _project date_. It can be changed later.
 
 #### Email subject
 
-The default subject is “Quick feedback on <your company name>”. You can change it to “Quick feedback on your <keyword> with <your company name>”. 
-For example, an E-Commerce company use “Quick feedback on your order with abcshoes.com”. For example an Airline company can use “Quick feedback on your flight with abcairlines”.
+The default subject is “Quick feedback on _brand name_”. You can change it to “Feedback on _keyword_ with _keyword_”. E.g. “Feedback on order with abcstores.com
 
 #### Reply-to email address
 
@@ -69,13 +67,13 @@ By default, a user will get maximum 3 survey per project per month. You can incr
 
 ## Sending surveys
 
-Once a project is created you can immediately start sending surveys. There are 2 ways to send surveys - sending from dashboard, sending through API. Please note that you can send non-transactional surveys only from dashboard.
+Once a project is created you can immediately start sending surveys. There are 2 ways to send surveys - sending from dashboard, sending through API. Please note that you can send transactional surveys only from API.
 
 ### Sending non-transactional surveys
 
 You can quickly send non-transactional surveys from within the dashboard. All you need is a list of your user’s email addresses. 
 1.	Go to “send surveys” section.
-2.	Import email addresses by either pasting them in comma separated format or importing a CSV file. You can import a maximum of 1000 email addresses in both methods. If you are using CSV method make sure all email addresses are in the first column. You can download a sample CSV file from the link provided.
+2.	Import email addresses by either pasting them in comma separated format (max 1000 emails).
 3.	You will be shown a preview of emails to which surveys will be sent. Boolean will remove duplicates and emails which have already hit daily/weekly/monthly throttle limits. After verifying the list, you can send the surveys by clicking “send”. Your surveys will be delivered in few minutes.
 
 
