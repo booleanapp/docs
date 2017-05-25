@@ -8,7 +8,7 @@ permalink: index.html
 
 ## What is Boolean?
 
-Boolean is a service for sending single question surveys. The surveys are sent by email. The survey question has two predetermined answers - one positive and one negative. Recipients can respond by clicking on one of the answers from within their inbox.
+Boolean is a service for sending single question surveys. The survey format consists of one question and two predetermined answers. Surveys are sent by email. Recipients can respond by clicking one of the answers from within their inbox.
 
 ## How is it useful?
 
