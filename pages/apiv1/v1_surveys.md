@@ -237,7 +237,7 @@ HTTP 1/1.1 200
         "$transaction_currency": null,
         "$transactional": false,
         "$req_id": "8084f80f-197e-4dc5-a3f0-11e10c5e9219",
-        "$prj_6_props": {},
+        "$properties": {},
         "$created_at": "2017-05-23T07:57:55.263Z",
         "$project_id": "6",
         "$survey_type": "EMAIL",
