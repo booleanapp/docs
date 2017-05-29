@@ -6,13 +6,13 @@ permalink: v1_surveys.html
 
 ## POST /surveys
 
-Used to send surveys
+Used to send surveys emails.
 
 ### Query parameters
 
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
-|transactional|No|"true" or "false"|Use "false" for non-transactional surveys. Surveys are assumed to be transactional by default. $transaction_id, $transaction_date, $transaction_amount, and $transaction_currency are mandatory for transactional surveys. Transactional survey emails will prominently feature these identifiers in email body.|
+|transactional|No|"true" or "false"|"Transactional" survey emails will prominently feature 4 variables in body - $transaction_id, $transaction_date, $transaction_amount, and $transaction_currency. You can use these variables when sending survey about an order/transaction with your product/service. Showing these variables will increase the legitimacy of your survey. All the 4 variables are mandatory for transactional surveys. Use "transactional=false" for sending regular survey emais. Survey emails are assumed to be transactional by default. Both kinds of surveys emails can be sent in a particular survey.|
 
 
 ### JSON parameters
@@ -50,7 +50,7 @@ Invalid property name examples - `$cust_prop`, `_cust_prop`, `#address`, `a`, `c
 
 
 
-#### Example transactional survey
+#### Example sending transactional survey email
 
 ```
 POST /surveys
@@ -95,7 +95,7 @@ HTTP 1/1.1 200
 }
 ```
 
-#### Example non-transactional survey
+#### Example sending regular survey email
 
 ```
 POST /surveys?transactional=false
@@ -133,13 +133,13 @@ HTTP 1/1.1 200
 
 #### Notes
 
-* Max 50 properties per project.
+* Max 50 properties per survey.
 
 * Max 10000 surveys per API call.
 
 * Surveys more than a month old will not be sent. This can happen when you have pending surveys but run out of credits.
 
-* If same survey is requested again, a "duplicate request" error will be returned. A unique survey is identified by combination of project_id and transaction_id.
+* If same survey is requested again, a "duplicate request" error will be returned. A unique survey is identified by $transaction_id.
 
 * Please check "message" and "errors" parameters for surveys which were not processed. These need to be tried again.
 
@@ -152,7 +152,7 @@ HTTP 1/1.1 200
 |1000|Error|Default error.|
 |1001|Invalid format|Invalid format of data.|
 |1002|Already exists|Property already exists with different data type.|
-|1003|Quota exceeded|Property quota exceeded. Max 50 properties per project.|
+|1003|Quota exceeded|Property quota exceeded. Max 50 properties per survey.|
 |1004|Duplicate request|A survey for same transaction_id was already sent.|
 |1006|Required property missing|One or more required property is missing.|
 |1009|Invalid Value|Value is incorrect for a given field.|
@@ -162,14 +162,14 @@ HTTP 1/1.1 200
 
 ## GET /surveys
 
-Used to list all surveys
+Used to list all surveys emails.
 
 ### Query parameters
 
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
-|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|The start date to retrieve responses.|
-|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|The end date to retrieve responses.|
+|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The start date to retrieve responses.|
+|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The end date to retrieve responses.|
 |date_filter_type|No|created_at or response_received_at or opened_at|To specify basis of date filter. by default created_at will be used.|
 |page|No|Integer. Min 1. Max 20.|Optional parameter to specify page number. To be used with size parameter.|
 |size|No|Integer. Min 10. Max 100.|Optional parameter to specify number of results per page.|
@@ -253,6 +253,33 @@ HTTP 1/1.1 200
   }
 }
 ```
+### Survey object
+
+|Parameter|Description|
+|---------|--------|
+|$email|Email address of survey recipient.|
+|$transaction_id|Mandatory variable for transactional survey emails.|
+|$transaction_date|Mandatory variable for transactional survey emails.|
+|$transaction_amount|Mandatory variable for transactional survey emails.|
+|$transaction_currency|Mandatory variable for transactional survey emails.|
+|$transactional|Whether transactional survey email or not.|
+|$req_id|Request id of API request to send survey email.|
+|$created_at|Time of acceptance of send survey email request.|
+|$project_id|id of survey.|
+|$survey_type|Type of survey. Currently only email.|
+|$survey_sent|Status of survey email sending.|
+|$survey_picked|Status of picking survey email to send.|
+|$survey_picked_at|Time when survey email was picked to send.|
+|$message_id|Id of email with 3rd party email provider.|
+|$feedback|Response received for survey. 0 means no response received yet. 1 means positive response received. -1 means negative response received.|
+|$survey_sent_at|Time when survey email was sent.|
+|$postmark_bounce_type|Email bounce type.|
+|$postmark_bounce_desc|Email bounce description.|
+|$postmark_bounce_id|Email bounce id.|
+|$bounced_at|Time when survey email bounced.|
+|$id|id of survey email.|
+|$properties|Properties of survey email as set during creation.|
+
 
 
 #### Notes
@@ -270,7 +297,7 @@ HTTP 1/1.1 200
 
 ## GET /surveys/[id]
 
-Used to get a specific survey
+Used to get a specific survey email.
 
 ### URL format
 
