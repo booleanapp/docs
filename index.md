@@ -49,6 +49,10 @@ You can see response data in real time in our dashboard. “Boolean score” is 
 
 Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
 
+### Repeat survey emails
+
+You can send multiple surveys emails to a single email address. This will be useful when you want to ask the same question to a specific user at different points in time.
+
 ### High quality inbox delivery
 
 We work with high quality email delivery partners to make sure your surveys are delivered fast and reach the “primary” inbox.
@@ -67,7 +71,7 @@ After a survey recipient gives a response we give him/her an option to give comm
 
 ### Easy unsubscribing
 
-We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future surveys in the project. You can also unsubscribe recipients using our [API](/docs/v1_unsubscribes.html). Please note that unsubscribe is at project level.
+We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future emails in a survey. You can also unsubscribe recipients using our [API](/docs/v1_unsubscribes.html).
 
 ### Scheduling
 

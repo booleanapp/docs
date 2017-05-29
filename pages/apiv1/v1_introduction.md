@@ -11,7 +11,7 @@ https://api.booleanapp.com/v1
 ```
 
 - HTTP is not supported. Only HTTPS.
-- The context for all resources in this endpoint is the project indentified by authentication key.
+- The context for all resources in this endpoint is the survey indentified by authentication key.
 
 ## General requirements
 
@@ -21,7 +21,7 @@ https://api.booleanapp.com/v1
 
 ## Authentication
 
-- Use HTTP BASIC authentication. Use project's API key for username. Leave password empty.
+- Use HTTP BASIC authentication. Use survey's API key for username. Leave password empty.
 
 ```
 curl https://api.booleanapp.com/v1/surveys?pretty -u sk_800089b0657fa1c9dje14af1:
@@ -80,7 +80,7 @@ https://api.booleanapp.com/v1/stats?start_date=2016-07-16&end_date=2016-07-17&in
 |1000|Error|Default error.|
 |1001|Invalid format|Invalid format of data.|
 |1002|Already exists|Property already exists with different data type.|
-|1003|Quota exceeded|Property quota exceeded. Max 50 properties per project.|
+|1003|Quota exceeded|Property quota exceeded. Max 50 properties per survey.|
 |1004|Duplicate request|A survey for same transaction_id was already sent.|
 |1006|Required property missing|One or more required property is missing.|
 |1007|Email already unsubscribed|Email was unsubscribed in a previous API request.|

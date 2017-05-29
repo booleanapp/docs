@@ -13,8 +13,8 @@ Used to get survey response aggregates.
 
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
-|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|The start of the date range for which to get score.|
-|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|The end of the date range for which to get score.|
+|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The start of the date range for which to get score.|
+|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The end of the date range for which to get score.|
 |interval|No|Day or Week or Month|Method to group scores. Default grouping is by day.|
 |where|No|string|Used for segmentation. Use combinations of custom property conditions.|
 
@@ -71,7 +71,7 @@ Used to get survey response aggregates.
 
 * When aggregating by month/week the first day of the month/week will represent the month/week. If the start date is in the middle of month/week then data will be provided for partial month/week, but label in API response will be of first day of month/week.
 
-* Following formats are allowed for date properties: YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone will be inferred from your project setting.
+* Following formats are allowed for date properties: YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone will be inferred from your survey setting.
 
 
 #### Example

@@ -28,10 +28,6 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: Key concepts
-      url: /key_concepts.html
-      output: web, pdf
-
     - title: Sending surveys
       url: /send_surveys.html
       output: web, pdf

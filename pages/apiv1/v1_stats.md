@@ -12,8 +12,8 @@ Used to get statistics on sent surveys.
 
 |Parameter|Required|Requirements|
 |---------|--------|------------|
-|start_date|Yes|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|
-|end_date|Yes|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from project setting.|
+|start_date|Yes|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|
+|end_date|Yes|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|
 |interval|No|Day or Week or Month.|
 
 #### Example

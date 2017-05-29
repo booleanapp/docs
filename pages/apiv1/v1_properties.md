@@ -6,7 +6,7 @@ permalink: v1_properties.html
 
 ## GET /properties
 
-Used to list properties set for a project
+Used to list properties set for a survey.
 
 ### URL parameters
 

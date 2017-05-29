@@ -12,7 +12,7 @@ Used to unsubscribe an email through API. You can only unsubscribe an email to w
 
 | Parameter | Required | Requirement| Description|
 |-----------|----------|------------|------------|
-|$email| Yes| email address. Max 75 characters.|Email address which needs to be unsubscribed from clientâ€™s feedback emails.|
+|$email| Yes| email address. Max 75 characters.|Email address which needs to be unsubscribed from survey's emails.|
 
 #### Example
 
