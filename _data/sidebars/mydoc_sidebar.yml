@@ -48,8 +48,8 @@ entries:
       url: /v1_introduction.html
       output: web, pdf
 
-    - title: POST,GET /surveys
-      url: /v1_surveys.html
+    - title: POST,GET /messages
+      url: /v1_messages.html
       output: web, pdf
 
     - title: GET /score

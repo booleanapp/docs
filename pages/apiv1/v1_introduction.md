@@ -24,7 +24,7 @@ https://api.booleanapp.com/v1
 - Use HTTP BASIC authentication. Use survey's API key for username. Leave password empty.
 
 ```
-curl https://api.booleanapp.com/v1/surveys?pretty -u sk_800089b0657fa1c9dje14af1:
+curl https://api.booleanapp.com/v1/messages?pretty -u sk_800089b0657fa1c9dje14af1:
 ```
 
 ## Rate limits

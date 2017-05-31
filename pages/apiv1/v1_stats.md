@@ -6,7 +6,7 @@ permalink: v1_stats.html
 
 ## GET /stats
 
-Used to get statistics on sent surveys.
+Used to get statistics on sent survey emails.
 
 ### URL parameters
 
@@ -31,7 +31,7 @@ HTTP/1.1 200
   "success": true,
   "errors": [],
   "response": {
-    "surveys_requested": [
+    "messages_requested": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -48,7 +48,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "surveys_throttled": [
+    "messages_throttled": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -65,7 +65,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "surveys_send_failed": [
+    "messages_send_failed": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -82,7 +82,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "surveys_sent": [
+    "messages_sent": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
