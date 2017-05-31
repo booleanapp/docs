@@ -31,7 +31,7 @@ HTTP/1.1 200
   "success": true,
   "errors": [],
   "response": {
-    "messages_requested": [
+    "surveys_requested": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -48,7 +48,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "messages_throttled": [
+    "surveys_throttled": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -65,7 +65,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "messages_send_failed": [
+    "surveys_send_failed": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
@@ -82,7 +82,7 @@ HTTP/1.1 200
         "count": 0
       }
     ],
-    "messages_sent": [
+    "surveys_sent": [
       {
         "interval_date": "2017-05-23T00:00:00+05:30",
         "epoch": 1495477800,
