@@ -76,7 +76,7 @@ You can quickly send non-transactional surveys from within the dashboard. All yo
 
 ### Sending surveys through API
 
-Read [API documentation](/docs/v1_surveys.html).
+Read [API documentation](/docs/v1_messages.html).
 
 ## Properties
 
