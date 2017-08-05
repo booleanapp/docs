@@ -12,7 +12,7 @@ Boolean is a service for sending single question surveys. The survey format cons
 
 ## How is it useful?
 
-Traditional surveys don’t get many responses because their long. Even the minimal responses they get don’t have legitimacy due to low response percentage. Boolean solves this problem. In Boolean you can ask only one question in a survey. Users will love you for not troubling them with a long and boring survey. They will respond in huge numbers. The one question you ask can be anything related to your product or service. We encourage you to ask a general feedback question. E.g. “How was your experience ordering with us?” Answer - “Good” or “Bad”.
+Traditional surveys don’t get high response rate as they have too many questions. Even the minimal responses they get are not valued due to low response rate. Boolean solves this problem. In Boolean you can ask only one question in a survey. Users will love you for not troubling them with a long and boring survey. They will respond in huge numbers. The one question you ask can be anything related to your product or service. We encourage you to ask a general feedback question. E.g. “How was your experience ordering with us?” Answer - “Good” or “Bad”.
 
 ## How do I get insights from responses?
 
