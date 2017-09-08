@@ -115,4 +115,4 @@ A user can opt to stop receiving surveys from all surveys of an account by click
 
 ## Send limits
 
-We have setup limits on sending surveys to curb abuse. "Free" accounts have a limit of 100 surveys per hour and 500 surveys per day. Pro accounts have a limit of 1000 surveys per hour and 5000 surveys per day. Please contact us at support@booleanapp.com to request increase in limit.
+We have setup limits on sending surveys to curb abuse. "Free" accounts have a limit of 100 surveys per hour and 500 surveys per day. "Pro" accounts have a limit of 1000 surveys per hour and 5000 surveys per day. Please contact us at support@booleanapp.com to request increase in limit.
