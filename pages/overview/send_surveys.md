@@ -111,5 +111,5 @@ You can send a maximum of 50 unique properties per survey. Adding properties wil
 
 ## Unsubscribes
 
-A user can opt to stop receiving emails from a survey by clicking unsubscribe link in the email. We have provided this feature to protect users from unwanted email. Unsubscribing is at survey level. You can’t re-subscribe an unsubscribed user. Be considerate in the number of emails you send out to a user in a single survey. Use “throttling” survey setting judiciously. You can also unsubscribe users through API.
+A user can opt to stop receiving surveys from all surveys of an account by clicking unsubscribe link in the email. You can also unsubscribe users from specific surveys in your account through the [/unsubscribes](/docs/v1_unsubscribes.html) endpoint in API.
 
