@@ -107,7 +107,7 @@ You can add key-value pair meta data about as “properties” of a survey. Bool
 |Date|Order date, delivery date|
 
 
-Properties are set while sending surveys through API. You can send a maximum of 50 unique properties per survey. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
+You can send a maximum of 50 unique properties per survey. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
 
 ## Unsubscribes
 
