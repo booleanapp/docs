@@ -32,7 +32,7 @@ Provide the negative answer for your question (max 10 characters). This answer w
 
 ### Advanced survey settings
 
-These settings are not compulsory. They have good defaults.
+These settings are not mandatory. They have good defaults.
 
 #### Survey name
 
@@ -68,10 +68,25 @@ Once a survey is created you can immediately start sending survey emails. There 
 
 ### Sending surveys from dashboard
 
-You can quickly send non-transactional surveys from within the dashboard. All you need is a list of your user’s email addresses. 
+#### Send surveys by pasting email addresses
+
+You can quickly send surveys from within the dashboard. All you need is a list of your user’s email addresses. 
 1.	Go to “send surveys” section.
-2.	Import email addresses by either pasting them in comma separated format (max 1000 emails).
-3.	You will be shown a preview of emails to which surveys will be sent. Boolean will remove duplicates and emails which have already hit daily/weekly/monthly throttle limits. After verifying the list, you can send the surveys by clicking “send”. Your surveys will be delivered in few minutes.
+2.	Import email addresses by pasting them in comma separated format (max 1000 emails).
+3.	You will be shown a preview of emails to which surveys will be sent. We will remove duplicates and emails which have already hit daily/weekly/monthly throttle limits. After verifying the list, you can send the surveys by clicking “send”.
+
+#### Send surveys by importing emails through CSV file
+
+You can send surveys by importing a list of emails through a CSV file. This method allows you to add properties for each email.
+1.	Go to “send surveys” section.
+2. 	Click the "upload" button to select CSV file from your computer.
+3. 	We will validate the upload file for data errors. After successful validation you will see a "send surveys" button. Click the button to send surveys.
+
+Some points to remember for CSV file:
+1. The first row should contain header for each column. Only email column is mandatory.
+2. Each property column's header should have property type and property name. For e.g. a string property "city" will should header as "S:city".
+3. You download a sample CSV file with headers for all survey properties by clicking "Download CSV template".
+4. Please refer [property data guidelines](/docs/v1_messages.html#property-data-types) for each property to fix validation errors. When a string property has number value use quotes.
 
 
 ### Sending surveys through API
