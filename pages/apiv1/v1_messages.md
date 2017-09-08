@@ -43,7 +43,7 @@ Invalid property name examples - `$cust_prop`, `_cust_prop`, `#address`, `a`, `c
 |-------------|--------|-----------|
 |String|S|Max 255 characters.|
 |Number|N|Max 9999999999.|
-|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SSZÂ±00:00 (local time with UTC offset) or 1474698657 (epoch). Pleast note that time zone specification is mandatory for date properties.|
+|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with UTC offset) or 1474698657 (epoch). Pleast note that time zone specification is mandatory for date properties.|
 |Boolean|B|true or false.|
 |String set|SS|Max 20 items in array, each string max 255 characters.|
 |Number set|NS|Max 20 items in array, each number max 9999999999.|
