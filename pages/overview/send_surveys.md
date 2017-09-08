@@ -113,3 +113,6 @@ You can send a maximum of 50 unique properties per survey. Adding properties wil
 
 A user can opt to stop receiving surveys from all surveys of an account by clicking unsubscribe link in the email. You can also unsubscribe users from specific surveys in your account through the [/unsubscribes](/docs/v1_unsubscribes.html) endpoint in API.
 
+## Send limits
+
+We have setup limits on sending surveys to curb abuse. "Free" accounts have a limit of 100 surveys per hour and 500 surveys per day. Pro accounts have a limit of 1000 surveys per hour and 5000 surveys per day. Please contact us at support@booleanapp.com to request increase in limit.
