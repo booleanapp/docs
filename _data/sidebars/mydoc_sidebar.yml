@@ -36,10 +36,6 @@ entries:
       url: /analyze_responses.html
       output: web, pdf
 
-    - title: Managing account
-      url: /manage_account.html
-      output: web, pdf
-
   - title: API v1 Reference
     output: web, pdf
     folderitems:
