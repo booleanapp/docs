@@ -1,7 +1,7 @@
 ---
 title: Managing account
 sidebar: mydoc_sidebar
-permalink: manage_account.html
+permalink: manage_account_old.html
 ---
 
 ## General settings
