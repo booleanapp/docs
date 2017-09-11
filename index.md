@@ -8,30 +8,23 @@ permalink: index.html
 
 ## What is Boolean?
 
-Boolean is a service for sending single question surveys. The survey format consists of one question and two predetermined answers. Surveys are sent by email. Recipients can respond by clicking one of the answers from within their inbox.
+Boolean is a service for sending single question email surveys. The survey format consists of one question and two predetermined answers. Recipients can respond by clicking one of the answers from within their inbox.
 
-## How is it useful?
+## How is it different?
 
-Traditional surveys don’t get high response rate as they have too many questions. Even the minimal responses they get are not valued due to low response rate. Boolean solves this problem. In Boolean you can ask only one question in a survey. Users will love you for not troubling them with a long and boring survey. They will respond in huge numbers. The one question you ask can be anything related to your product or service. We encourage you to ask a general feedback question. E.g. “How was your experience ordering with us?” Answer - “Good” or “Bad”.
-
-## How do I get insights from responses?
-
-You might want to know why survey recipients are giving positive or negative response. Boolean’s segmentation feature will give you the likely answer. You can use this feature by sending key-value pair meta data with every survey request. You can later segment responses using this meta data. This way you could pin point the finer aspects of your product or service which is contributing to positive or negative response. Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
-
+Boolean surveys get high response rate compared to traditional surveys as it asks only one question.
 
 ## Features:
 	
-### Fully customizable
-
-You can customize the following aspects of survey:
+### Customizable look of survey
 
 #### Brand logo
 
-This is the image which appears above the question.
+It is displayed at the top of the email.
 
 #### Brand name
 
-This is used in “sender name” of email and “alt text” of brand logo.
+It is used as “sender name” of the email.
 
 #### Email subject
 
@@ -47,15 +40,8 @@ You can see response data in real time in our dashboard. “Boolean score” is 
 
 ### Segmentation
 
-Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
+You can segment responses using properties to find patterns in negative response. Read more about segmentation [here](/docs/analyze_responses.html#segmenting-responses).
 
-### Repeat survey emails
-
-You can send multiple surveys emails to a single email address. This will be useful when you want to ask the same question to a specific user at different points in time.
-
-### High quality inbox delivery
-
-We work with high quality email delivery partners to make sure your surveys are delivered fast and reach the “primary” inbox.
 
 ### Throttling
 
@@ -71,7 +57,7 @@ After a survey recipient gives a response we give him/her an option to give comm
 
 ### Easy unsubscribing
 
-We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future emails in a survey. You can also unsubscribe recipients using our [API](/docs/v1_unsubscribes.html).
+We add an unsubscribe link in the footer of survey email. Clicking this link will unsubscribe the recipient (email address) from all future emails from an account. You can unsubscribe recipients from specific surveys using our [API](/docs/v1_unsubscribes.html). Recipients can also opt out of Boolean surveys through link in our website.
 
 ### Scheduling
 
