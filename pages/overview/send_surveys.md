@@ -109,6 +109,17 @@ You can add key-value pair meta data about as “properties” of a survey. Bool
 
 You can send a maximum of 50 unique properties per survey. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
 
+### Auto captured properties
+
+We capture the following properties of survey response automatically.
+
+|Property name|Example|
+|-------------|--------|
+|response_device|Apple iphone 7|
+|response_os|iOS 9.3.5|
+|response_browser|Mobile Safari 9|
+
+
 ## Unsubscribes
 
 A user can opt to stop receiving surveys from all surveys of an account by clicking unsubscribe link in the email. You can also unsubscribe users from specific surveys in your account through the [/unsubscribes](/docs/v1_unsubscribes.html) endpoint in API.
