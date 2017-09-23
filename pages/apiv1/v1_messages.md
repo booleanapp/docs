@@ -22,10 +22,10 @@ Used to send surveys emails. An email sent to a specific email address as part o
 |$email|Yes|email address. Max 75 characters.|Email address of recipient.|
 |properties|No|Dictionary/map|Used to send properties of survey for segmentation purposes. Property name and data type should be specified in every request. Property name and data type once set cannot be changed. If you try to send a wrong data type for an existing property the survey request will be rejected. You can use any string for property name which satisfies [these requirements](#property-naming-requirements).|
 |$transaction_id|No|String, max 50 characters|Mandatory for transactional emails.|
-|$transaction_date|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SSZÂ±00:00 (local time with UTC offset) or 1474698657 (epoch) |Mandatory for transactional emails.|
+|$transaction_date|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch) |Mandatory for transactional emails.|
 |$transaction_amount|No|Number (double). Max 9999999999|Mandatory for transactional emails.|
 |$transaction_currency|No|INR, USD, EUR, JPY, GBP or CNY|Mandatory for transactional emails.|
-|$send_at|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SSZÂ±00:00 (local time with UTC offset) or 1474698657 (epoch) |Use this for scheduling survey for a later time.|
+|$send_at|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch) |Use this for scheduling survey for a later time.|
 
 ### Property naming requirements
 
@@ -43,7 +43,7 @@ Invalid property name examples - `$cust_prop`, `_cust_prop`, `#address`, `a`, `c
 |-------------|--------|-----------|
 |String|S|Max 255 characters.|
 |Number|N|Max 9999999999.|
-|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with UTC offset) or 1474698657 (epoch). Pleast note that time zone specification is mandatory for date properties.|
+|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch). Pleast note that time zone specification is mandatory for date properties.|
 |Boolean|B|true or false.|
 |String set|SS|Max 20 items in array, each string max 255 characters.|
 |Number set|NS|Max 20 items in array, each number max 9999999999.|
