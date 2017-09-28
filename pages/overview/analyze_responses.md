@@ -14,8 +14,7 @@ It is the percentage of positive responses in a time period. You can see this sc
 
 ### Boolean score
 
-It is rating from -10 to +10 derived from an algorithm which takes into account additional signals like email opens. We have created this metric because “Positive score” can be misleading at times. For example, if you sent 1000 surveys and got only 10 responses which were all positive you will see a positive score of 100%. This is misleading as majority of your users didn’t give a response. A user opting to not give a response can be treated as a signal of his/her dissatisfaction. “Boolean score” incorporates this signal in its calculation of rating. Since Boolean knows when a survey is delivered or opened by user it can use a “no response” as a signal with confidence.
-You can see this score for all projects in the dashboard page. Once inside a project you can see it in the "responses" page. You can also get this score through API.
+It is a rating from -10 to +10 derived from the formular (count of positive responses - count of negative responses)/(count of survey opens) * 10. We have created this metric because “Positive score” can be misleading at times. For example, if you sent 1000 surveys and got only 10 responses which were all positive you will see a positive score of 100%. This is misleading as majority of your users didn’t give a response. A user opting to not give a response can be treated as a signal of his/her dissatisfaction. “Boolean score” incorporates this signal in its calculation of rating.
 
 ## Segmenting responses
 
