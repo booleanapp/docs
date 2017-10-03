@@ -38,7 +38,7 @@ Survey recipients can add comments to their response.
 
 ### Easy unsubscribing
 
-Recipients can opt-out of receiving surveys from an account by clicking unsubscribe link in footer of email. They can also opt out of Boolean surveys completely using the opt-out form in our website. You can unsubscribe recipients from specific surveys in your account using the [API](/docs/v1_unsubscribes.html). 
+Recipients can opt-out of receiving surveys from an account by clicking unsubscribe link in footer of email. They can also opt-out of Boolean surveys completely using the opt-out form in our website. You can unsubscribe recipients from specific surveys in your account using the [API](/docs/v1_unsubscribes.html). 
 
 ### Scheduling
 

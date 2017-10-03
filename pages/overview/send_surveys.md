@@ -8,27 +8,27 @@ permalink: send_surveys.html
 
 ### Basic survey settings
 
-You will need to provide the following minimum settings to create a survey. 
+Provide the following minimum settings to create a survey. 
 
 #### Sender name
 	
-Provide a name for your product/service. It is used in email sender name, subject and “alt text” of logo in email. Default email subject is “Quick feedback on _sender name_”. 
+Provide a name to use for sender name of email.
 
 #### Sender logo
 
-Upload a easily identifiable logo of your product/service. It will be used in the header section of survey email. 
+Provide a logo to add to the top of email. 
 
 #### Survey question
 
-Provide the question to ask your users (max 60 characters).
+Provide the survey question (max 60 characters).
 
 #### Positive answer
 
-Provide the positive answer for your question (max 10 characters). This answer will have a green background in the survey email.
+Provide a positive answer (max 10 characters).
 
 #### Negative answer
 
-Provide the negative answer for your question (max 10 characters). This answer will have a red background in the survey email.
+Provide a negative answer (max 10 characters).
 
 ### Advanced survey settings
 
@@ -36,57 +36,56 @@ These settings are not mandatory. They have good defaults.
 
 #### Survey name
 
-A name for your survey. It will default to survey date_. It can be changed later.
+A name for your survey.
 
 #### Email subject
 
-The default subject is “Quick feedback on _sender name_”. You can change it to “Feedback on _keyword_ with _keyword_”. E.g. “Feedback on order with abcstores.com
+The default subject is “Quick feedback on _sender name_”. You can change it to “Feedback on _keyword_ with _keyword_”. E.g. “Feedback on order with abcstores.com"
 
 #### Reply-to email address
 
-Boolean will add this email address to the “reply-to” header of survey email. If any of your users reply to survey email it will be sent to this address. Otherwise by default any reply to survey email will be rejected. We encourage you to add your customer support email address to here to get valuable feedback directly to your support inbox.
+Provide an email address to add to "reply-to" header of email. If not provided any reply to email will be rejected.
 
 #### Time-zone
 
-Select time-zone of your location. It will be used as basis for all dashboard reports. You can change it later. If you and your users are located in different time zones, then we suggest you use your time zone as it will suit your daily schedule. 
+Select time-zone of for use in dashboard reports.
 
 #### Send throttle (day)
 
-It is not a good idea sending too many emails to a single user in the same survey. So Boolean throttles the number of emails an individual user (unique email address) gets in a day, week and month. Boolean will ignore any new survey requests for a throttled user. By default, a user will get maximum 1 email per survey per day. You can increase it to 2. 
+Max number of emails a recipient will recieve in a day. Default is 1. 
 
 #### Send throttle (week)
 
-By default, a user will get maximum 2 emails per survey per week. You can increase it up to 4.
+Max number of emails a recipient will recieve in a week. Default is 2. 
 
 #### Send throttle (month)
 
-By default, a user will get maximum 3 emails per survey per month. You can increase it up to 6.
+Max number of emails a recipient will recieve in a week. Default is 3. 
 
 ## Sending surveys
 
-Once a survey is created you can immediately start sending survey emails. There are 2 ways to send surveys - sending from dashboard, sending through API.
+Surveys can be sent through the dashboard or the API.
 
-### Sending surveys from dashboard
+### Sending surveys through dashboard
 
-#### Send surveys by pasting email addresses
+#### Copy paste email addresses
 
-You can quickly send surveys from within the dashboard. All you need is a list of your user’s email addresses. 
 1.	Go to “send surveys” section.
-2.	Import email addresses by pasting them in comma separated format (max 1000 emails).
+2.	Copy paste emails in comma separated format (max 1000 emails).
 3.	You will be shown a preview of emails to which surveys will be sent. We will remove duplicates and emails which have already hit daily/weekly/monthly throttle limits. After verifying the list, you can send the surveys by clicking “send”.
 
 #### Send surveys by importing emails through CSV file
 
-You can send surveys by importing a list of emails through a CSV file. This method allows you to add properties for each email.
+This method allows you to add properties for each email.
 1.	Go to “send surveys” section.
-2. 	Click the "upload" button to select CSV file from your computer.
+2. 	Click the "upload" button to select CSV file from your computer (max 1000 emails).
 3. 	We will validate the upload file for data errors. After successful validation you will see a "send surveys" button. Click the button to send surveys.
 
 Some points to remember for CSV file:
 1. The first row should contain header for each column. Only email column is mandatory.
 2. Each property column's header should have property type and property name. For e.g. a string property "city" will should header as "S:city".
-3. You download a sample CSV file with headers for all survey properties by clicking "Download CSV template".
-4. Please refer [property data guidelines](/docs/v1_messages.html#property-data-types) for each property to fix validation errors. When a string property has number value use quotes.
+3. Refer to [property data guidelines](/docs/v1_messages.html#property-data-types) for each property to fix validation errors. 
+4. When a string property has number value use quotes.
 
 
 ### Sending surveys through API
@@ -95,7 +94,7 @@ Read [API documentation](/docs/v1_messages.html).
 
 ## Properties
 
-You can add key-value pair meta data about as “properties” of a survey. Boolean supports six different types of properties - Number, String, Number set, String set, Date and Boolean. The table below explains each type of property.
+Add properties to each recipient to segment responses. We support six different types of properties - Number, String, Number set, String set, Date and Boolean. You can add maximum of 50 unique properties per survey.
 
 |Property type|Examples|
 |-------------|--------|
@@ -106,8 +105,6 @@ You can add key-value pair meta data about as “properties” of a survey. Bool
 |Boolean|Returning customer (Yes or No)|
 |Date|Order date, delivery date|
 
-
-You can send a maximum of 50 unique properties per survey. Adding properties will allow you to segment responses and find reasons for negative feedback. Please read API documentation for detailed guide on sending properties.
 
 ### Auto captured properties
 
@@ -122,7 +119,7 @@ We capture the following properties of survey response automatically.
 
 ## Unsubscribes
 
-A user can opt to stop receiving surveys from all surveys of an account by clicking unsubscribe link in the email. You can also unsubscribe users from specific surveys in your account through the [/unsubscribes](/docs/v1_unsubscribes.html) endpoint in API.
+Recipients can opt-out of receiving surveys from an account by clicking unsubscribe link in footer of email. They can also opt-out of Boolean surveys completely using the opt-out form in our website. You can unsubscribe recipients from specific surveys in your account using the [API](/docs/v1_unsubscribes.html). 
 
 ## Send limits
 
