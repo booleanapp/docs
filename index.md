@@ -12,7 +12,7 @@ Boolean is a service for sending single question surveys by email. The survey fo
 
 ## Features:
 	
-### Customizable look of survey
+### Customize look of survey
 
 You can customize the survey to make it look like you sent it. Add your company's name, logo in email body, subject and sender name.
 
@@ -28,7 +28,7 @@ You can segment responses to find patterns in negative response. Read more about
 
 Prevent spamming your users with too many surveys by capping the number of surveys a recipient can receive in a day, week and month. By default, a recipient will receive a maximum of 1 per day, 2 per week and 4 per month.
 
-### RESTful API
+### API
 
 Use our RESTful API to fully automate your survey workflow. Read API reference [here](/docs/v1_introduction.html).
 
