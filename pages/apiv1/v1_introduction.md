@@ -29,11 +29,11 @@ curl https://api.booleanapp.com/v1/messages?pretty -u sk_800089b0657fa1c9dje14af
 
 ## Rate limits
 
-- Max 5000 requests per hour.
-- "X-RateLimit-Limit" response header will communicate max requests allowed in current time interval.
-- "X-RateLimit-Remaining" response header will communicate available requests remaining in current time interval.
-- "X-RateLimit-Reset" response header will communicate time of next limit reset.
-- There is also a limit of 60 requests with failed authentication per hour.
+- Max 5000 authenticated requests per hour.
+- Max 60 unauthenticated requests per hour.
+- "X-RateLimit-Limit" header shows max requests allowed in current time interval.
+- "X-RateLimit-Remaining" header shows available requests remaining in current time interval.
+- "X-RateLimit-Reset" header shows time of next limit reset.
 
 ```
 HTTP/1.1 200 OK
