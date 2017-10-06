@@ -6,13 +6,13 @@ permalink: v1_messages.html
 
 ## POST /messages
 
-Used to send surveys emails. An email sent to a specific email address as part of a survey is called a "message".
+Used to send survey emails.
 
 ### Query parameters
 
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
-|transactional|No|"true" or "false"|"Transactional" emails will prominently feature 4 mandatory variables in email body - $transaction_id, $transaction_date, $transaction_amount, and $transaction_currency. You can use these variables when sending survey about an order/transaction with your product/service. Showing these variables will give the survey recipient context about the transaction/order for which survey is sent. Use "transactional=false" for sending regular emails. Both kinds of emails can be sent in a particular survey.|
+|transactional|No|"true" or "false"|"Transactional" emails will prominently feature 4 variables in body - $transaction_id, $transaction_date, $transaction_amount, and $transaction_currency. Use "transactional=false" for sending regular emails.|
 
 
 ### JSON parameters
@@ -20,12 +20,12 @@ Used to send surveys emails. An email sent to a specific email address as part o
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
 |$email|Yes|email address. Max 75 characters.|Email address of recipient.|
-|properties|No|Dictionary/map|Used to send properties of survey for segmentation purposes. Property name and data type should be specified in every request. Property name and data type once set cannot be changed. If you try to send a wrong data type for an existing property the survey request will be rejected. You can use any string for property name which satisfies [these requirements](#property-naming-requirements).|
+|properties|No|Dictionary/map|Used to send properties for segmentation. Property name and data type should be specified in every request. Property name and data type once set cannot be changed. Property name should follow these [rules](#property-naming-requirements).|
 |$transaction_id|No|String, max 50 characters|Mandatory for transactional emails.|
 |$transaction_date|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch) |Mandatory for transactional emails.|
 |$transaction_amount|No|Number (double). Max 9999999999|Mandatory for transactional emails.|
 |$transaction_currency|No|INR, USD, EUR, JPY, GBP or CNY|Mandatory for transactional emails.|
-|$send_at|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch) |Use this for scheduling survey for a later time.|
+|$send_at|No|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch) |Use for scheduling emails.|
 
 ### Property naming requirements
 
@@ -43,7 +43,7 @@ Invalid property name examples - `$cust_prop`, `_cust_prop`, `#address`, `a`, `c
 |-------------|--------|-----------|
 |String|S|Max 255 characters.|
 |Number|N|Max 9999999999.|
-|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch). Pleast note that time zone specification is mandatory for date properties.|
+|Date|D|YYYY-MM-DDTHH:MM:SSZ (UTC time) or YYYY-MM-DDTHH:MM:SS±00:00 (local time with offset) or 1474698657 (epoch).|
 |Boolean|B|true or false.|
 |String set|SS|Max 20 items in array, each string max 255 characters.|
 |Number set|NS|Max 20 items in array, each number max 9999999999.|
@@ -138,11 +138,9 @@ HTTP 1/1.1 200
 
 * Max 10000 emails per API call.
 
-* Emails more than a month old will not be sent. This can happen when you have pending emails but run out of credits.
+* Max one email per unique $transaction_id.
 
-* Max one email can be sent per unique $transaction_id.
-
-* The API payload should always be a JSON array (even for a single survey request).
+* The API payload should always be a JSON array (even for a single email request).
 
 #### Error codes
 
@@ -152,23 +150,23 @@ HTTP 1/1.1 200
 |1001|Invalid format|Invalid format of data.|
 |1002|Already exists|Property already exists with different data type.|
 |1003|Quota exceeded|Property quota exceeded. Max 50 properties per survey.|
-|1004|Duplicate request|An email for same transaction_id was already sent.|
+|1004|Duplicate request|An email for same transaction_id already sent.|
 |1006|Required property missing|One or more required property is missing.|
 |1009|Invalid Value|Value is incorrect for a given field.|
-|1012|Invalid survey type|$transaction_id, $transaction_date, $transaction_currency and $transaction_amount supported only for transactional emails.|
+|1012|Invalid email type|$transaction_id, $transaction_date, $transaction_currency and $transaction_amount supported only for transactional emails.|
 |1013|Invalid key|Provided key is not supported.|
 
 
 ## GET /messages
 
-Used to list all surveys emails.
+Used to list emails.
 
 ### Query parameters
 
 |Parameter|Required|Requirements|Description|
 |---------|--------|------------|-----------|
-|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The start date to retrieve emails.|
-|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|The end date to retrieve emails.|
+|start_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|Start date.|
+|end_date|No|YYYY:MM:DD (time assumed midnight) or YYYY:MM:DDTHH:MM:SS. Timezone inferred from survey setting.|End date.|
 |date_filter_type|No|created_at or response_received_at or opened_at|To specify basis of date filter. Default is created_at.|
 |page|No|Integer. Min 1. Max 20.|Optional parameter to specify page number. To be used with size parameter.|
 |size|No|Integer. Min 10. Max 100.|Optional parameter to specify number of results per page.|
@@ -264,17 +262,17 @@ HTTP 1/1.1 200
 |$req_id|Request id of POST API request.|
 |$created_at|Time of acceptance of POST API request.|
 |$project_id|id of survey.|
-|$survey_type|Type of survey. Currently only email.|
+|$survey_type|Type of email. Currently only email.|
 |$survey_sent|Status of email sending.|
 |$survey_picked|Status of picking email to send.|
 |$survey_picked_at|Time when email was picked to send.|
 |$survey_sent_at|Time when email was sent.|
-|$feedback|Response received for survey. 0 means no response received yet. 1 means positive response received. -1 means negative response received.|
+|$feedback|Response received for email. 0 means no response received. 1 means positive response received. -1 means negative response received.|
 |$bounce_type|Email bounce type.|
 |$bounce_desc|Email bounce description.|
 |$bounce_id|Email bounce id.|
-|$bounced_at|Time when survey email bounced.|
-|$properties|Properties of survey email as set during creation.|
+|$bounced_at|Time when email bounced.|
+|$properties|Properties of email as set during creation.|
 
 
 
@@ -340,4 +338,4 @@ HTTP 1/1.1 200
 
 |Code|Message|
 |----|-------|
-|1010|Invalid message id.|
+|1010|Invalid email id.|
