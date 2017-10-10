@@ -176,6 +176,6 @@ HTTP/1.1 200
 
 |Code|Message|Description|
 |----|-------|-----------|
-|1001|Invalid format|Invalid format of data.|
+|1001|Invalid format||
 |1006|Required property missing|One or more required property is missing.|
-|1009|Invalid Value|Value is incorrect for a given field.|
+|1009|Invalid Value|Value is incorrect for given field.|
