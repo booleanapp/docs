@@ -6,13 +6,14 @@ permalink: v1_unsubscribes.html
 
 ## POST /unsubscribes
 
-Used to unsubscribe an email through API. You can only unsubscribe an email to which an email was already sent.
+Used to unsubscribe emails. You can only unsubscribe emails which have previously sent surveys.
+
 
 ### JSON parameters
 
 | Parameter | Required | Requirement| Description|
 |-----------|----------|------------|------------|
-|$email| Yes| email address. Max 75 characters.|Email address which needs to be unsubscribed from survey's emails.|
+|$email| Yes| email address. Max 75 characters.|Email address to be unsubscribed.|
 
 #### Example
 
@@ -65,6 +66,6 @@ POST /unsubscribes?pretty
 |Code|Message|Description|
 |----|-------|-----------|
 |1001|Invalid data|Invalid format of data.|
-|1005|Email doesn't exist|No email was sent to this address so far.|
+|1005|Email doesn't exist|This email has no previously sent surveys.|
 |1007|Email already unsubscribed|Email was unsubscribed in a previous API request.|
 |1008|Error while checking email exists|Email validation failed due to internal server error.|
